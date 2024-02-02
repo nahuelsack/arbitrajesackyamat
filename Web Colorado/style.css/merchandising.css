@@ -101,17 +101,14 @@
 .visible-carrito {
     top: 100px;
 }
-
 .carrito {
     padding: 10px;
     box-sizing: border-box;
 }
-
 .carrito-total {
     text-align: center;
     margin-top: 10px;
 }
-
 .boton-comprar {
     display: block;
     width: 100%;
@@ -122,7 +119,6 @@
     border-radius: 5px;
     margin-top: 10px;
 }
-
 .producto-en-carrito {
     margin-bottom: 10px;
     padding: 10px;
@@ -131,21 +127,16 @@
     display: flex;
     align-items: center;
 }
-
 .producto-en-carrito .carrito-previa {
     margin-right: 10px;
     width: 30px;
 }
-
 .producto-en-carrito .carrito-previa img {
     width: 100%;
-    border-radius: 50%;
 }
-
 .producto-en-carrito p {
     margin: 0;
 }
-
 .producto-en-carrito p strong {
     text-transform: uppercase;
     font-weight: bold;
@@ -159,7 +150,23 @@
     color: #888;
     font-size: 0.8em;
 }
-
+.carrito-contenido button.restar-cantidad,
+.carrito-contenido button.eliminar-producto {
+    padding: 5px 10px;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+@media only screen and (max-width:1250px) {
+    .fa-cart-shopping{
+        position: absolute;
+        right: 15%;
+        top: 42px;
+    }
+}
 
 @media only screen and (max-width:1234px) {
     .ropa-img {
@@ -178,10 +185,11 @@
     .ropa-container {
         padding-left: 0;
     }
-} 
-@media only screen and (max-width:850px) {
     .ropa-img {
         height: 330px;
+    }
+    .fa-cart-shopping {
+        right: 25%;
     }
 } 
 @media only screen and (max-width:510px) {
@@ -209,4 +217,7 @@ body.darkReal .ropa-precio span {
 }
 body.darkReal .main-ropa_principal h1 {
     color: var(--clr-blanco);
+}
+body.darkReal .carrito-container {
+    background-color: var(--clr-dark);
 }

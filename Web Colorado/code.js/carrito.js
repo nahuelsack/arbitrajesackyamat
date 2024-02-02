@@ -16,13 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         carritoContainer.classList.toggle('visible-carrito');
     });
 
-    // Evento al hacer clic en cualquier parte fuera del carrito para cerrarlo
-    document.addEventListener('click', event => {
-        if (!carritoContainer.contains(event.target) && !event.target.classList.contains('fa-cart-shopping')) {
-            carritoContainer.classList.remove('visible-carrito');
-        }
-    });
-
     // Evento al hacer clic en el contenido del carrito
     carritoContenido.addEventListener('click', event => {
         const target = event.target;
@@ -39,6 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
             eliminarProducto(nombreProducto);
         }
     });
+
+    // Elemento de mensaje de producto agregado
+const mensajeProductoAgregado = document.getElementById('mensaje-producto-agregado');
+
+// Función para mostrar el mensaje de producto agregado
+function mostrarMensajeProductoAgregado(nombreProducto) {
+    mensajeProductoAgregado.textContent = `${nombreProducto} ha sido agregado al carrito.`;
+    mensajeProductoAgregado.style.display = 'block';
+
+    // Ocultar el mensaje después de 3 segundos
+    setTimeout(() => {
+        mensajeProductoAgregado.style.display = 'none';
+    }, 3000);
+}
 
     // Evento al hacer clic en los productos disponibles
     productos.forEach(producto => {
