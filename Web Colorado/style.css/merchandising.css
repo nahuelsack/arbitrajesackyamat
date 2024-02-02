@@ -1,10 +1,16 @@
 .ropa-container {
     width: 100%;
+    margin: auto;
     padding-left: 230px;
     padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .main-ropa_principal {
-    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem 3rem;
 }
 .main-ropa_principal h1 {
     font-size: 2rem;
@@ -31,12 +37,11 @@
 }
 .ropa-info_container:hover {
     transition: 300ms;
-    transform: scale(1.01);
     box-shadow: 0px 0px 5px 0 #ff00d47d;
 }
 .ropa-img {
     width: 100%;
-    height: 400px;
+    height: 360px;
 }
 .ropa-img img{
     width: 100%;
@@ -72,14 +77,111 @@
     font-weight: 700;
     text-transform: uppercase;
 }
+.fa-cart-shopping{
+    margin: auto;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #de00b9;
+    transition: color 300ms;
+}
+.fa-cart-shopping:hover {
+    color: #bf009f;
+    cursor: pointer;
+}
+.carrito-container{
+    position: fixed;
+    right: 0;
+    width: 500px;
+    height: 450px;
+    background-color: var(--clr-blanco);
+    border-radius: 5px;
+    box-shadow: 0 0 1000px rgb(0, 0, 0);
+    overflow-y: auto;
+}
+.visible-carrito {
+    top: 100px;
+}
+
+.carrito {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carrito-total {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.boton-comprar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff69b4; /* Rosa */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.producto-en-carrito {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.producto-en-carrito .carrito-previa {
+    margin-right: 10px;
+    width: 30px;
+}
+
+.producto-en-carrito .carrito-previa img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.producto-en-carrito p {
+    margin: 0;
+}
+
+.producto-en-carrito p strong {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.producto-en-carrito p .precio {
+    color: green;
+}
+
+.producto-en-carrito p .cantidad {
+    color: #888;
+    font-size: 0.8em;
+}
+
+
+@media only screen and (max-width:1234px) {
+    .ropa-img {
+        height: 300px;
+    }
+}
 @media only screen and (max-width:1000px) {
     .cards-ropa_container {
         grid-template-columns: repeat(2,1fr);
+    }
+    .main-ropa_principal {
+        padding: 1rem 1rem;
     }
 }
 @media only screen and (max-width:850px) {
     .ropa-container {
         padding-left: 0;
+    }
+} 
+@media only screen and (max-width:850px) {
+    .ropa-img {
+        height: 330px;
     }
 } 
 @media only screen and (max-width:510px) {
@@ -88,7 +190,7 @@
         flex-direction: column;
     }
     .ropa-img {
-        height: 400px;
+        height: 350px;
     }
 } 
 body.darkReal .ropa-info_container {

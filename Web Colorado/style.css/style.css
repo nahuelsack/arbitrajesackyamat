@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
     list-style: none;
 }
+html{
+    overflow-x: hidden;
+}
+
 :root{
     --clr-negro:#464646;
     --clr-blanco:#f5f3ee;
@@ -52,10 +56,9 @@ html{
     background-color: var(--clr-blanco); 
 }
 .nav-container{
-    min-width: 90%;
-    width:90%;
-    height: 100%;
+    width: 90%;
     max-width: 1200px;
+    height: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -133,53 +136,11 @@ html{
     transition: 300ms;
     transform: scale(1.03);
 }
-@media screen and (max-width : 1250px){  
-    .nav-info{
-        position: absolute;
-        top: 100px;
-        right:-100%;
-        background-color: var(--clr-blanco);
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-        transition: 300ms;
-    }
-    .visible{
-        right: 0;
-    }
-    .nav-bars{
-        display: block;
-        font-size: 1.5rem;
-        color: var(--clr-negro);
-        cursor: pointer;
-        position: absolute;
-        top: 32px;
-        right: 8%;
-        text-align: center;
-    }
-    .nav-btn, .nav-logo{
-        display: none;
-    }
-    .nav1-ul{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        font-weight: 900;
-        letter-spacing: 2px;
-        gap: 1rem;
-    }
-}
-@media screen and (max-width:600px){
-    .nav-icons a{
-        font-size:1.2rem;
-        gap:1.5rem 
-    }
-}
 /* ENCABEZADO */
 .hero{
-    max-width: 100%;
+    width: 100%;
     min-height: 100vh;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,18 +149,17 @@ html{
     background-position:center;
     background-repeat: no repeat;
 }
-
 .hero-container{
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     padding-top: 6rem;
     margin: auto;
     gap: 2rem;
 }
-
 .hero-titulos{
     width: 100%;
     height: 100%;
@@ -208,7 +168,6 @@ html{
     gap: 1.5rem;
     align-items: center;
 }
-
 .hero-titulos a {
     background-color: #ff00d4;
     font-size: 1.1rem;
@@ -222,13 +181,11 @@ html{
     font-weight: 500;
     transition: background 300ms; 
 }
-
 .hero-titulos a:hover {
     background-color: #de00b9;
 }
-
 .hero-container h1{
-    padding:0 0 3rem 0;
+    padding:0 1rem 3rem 1rem;
     text-align: center;
     font-size:2.5rem;
     letter-spacing: 5px;
@@ -237,7 +194,6 @@ html{
     border-bottom: 2px solid #ff00d481;
     text-transform: uppercase;
 }
-
 .hero-container h2{
     max-width: 900px;
     font-size: 1rem;
@@ -247,43 +203,6 @@ html{
     border-radius: 10px;
     padding: 1rem;
     letter-spacing: 1px;
-}
-@media screen and (max-width:1000px){
-    .hero {
-        background: none;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .hero-container{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
-    .hero-titulos{
-        width: 100%;
-        margin-top: 7rem;
-    }
-}
-@media screen and (max-width:900px){
-    .hero-container h1{
-        font-size: 2.5rem;
-    }
-    .hero-container h2{
-        font-size: .8rem;
-    }
-}
-
-@media screen and (max-width:530px){
-    .hero-container h1{
-        font-size: 2.3rem;
-        padding: 1rem;
-    }
-    .hero-container h2{
-        font-size: .8rem;
-        font-weight: 500;
-    }
 }
 /* CARD */
 .DIV-CONTAINER{
@@ -312,28 +231,11 @@ html{
 #cards-totales .card:hover {
     transform: translateY(-15px);
 }
-@media screen and (max-width : 1000px){
-    .DIV-CONTAINER {
-        grid-template-columns: 200px 200px;
-        grid-template-rows: 200px 200px;
-    }
-}
-@media screen and (max-width : 530px){
-    .DIV-CONTAINER {
-        gap: 1rem;
-    }
-}
-@media screen and (max-width : 480px){
-    .DIV-CONTAINER {
-        grid-template-columns: 140px 140px;
-        grid-template-rows: 140px 140px;
-    }
-}
 /* MAIN */
 .main-container{
     position: relative;
-    max-width: 1200px;
     width: 90%;
+    max-width: 1200px;
     margin: auto;
     margin-top: 6rem;
 }
@@ -401,45 +303,6 @@ html{
 }
 .sociedad-llc_p a:hover{
     background-color:#de00b9;
-}
-@media only screen and (max-width: 1150px) {
-    .img-bitcoin {
-        display: none;
-    }
-    .main-container{
-        position: initial;
-    }
-    .main-p {
-        font-size: .8rem;
-    }
-}
-@media only screen and (max-width: 900px) {
-    .main-titulo-h1 {
-        font-size: 2rem;
-    }
-}
-@media only screen and (max-width: 950px) {
-    .sociedad-llc_container {
-        padding: 0;
-    }
-    .sociedad-llc_container {
-        flex-direction: column;
-    }
-    .sociedad-llc_p {
-        width: 100%;
-    }
-    .sociedad-llc_img_container {
-        height: 350px;
-        width: 100%;
-    }
-    .sociedad-llc_container {
-        max-height: max-content;
-    }
-}
-@media only screen and (max-width: 600px) {
-    .sociedad-llc_img_container {
-        height: 200px;
-    }
 }
 /* SECTION CURSOS Y COMUNIDAD */
 .section-cursosComunidad{
@@ -513,147 +376,6 @@ html{
 .section-comunidad-boton a:hover{
     background-color:#de00b9;
 }
-@media only screen and (max-width: 1150px) {
-    .section-cursosComunidad-p1_p {
-        font-size: .8rem;
-    }
-}
-@media only screen and (max-width: 900px) {
-    .section-cursosComunidad-tiulo-h1 {
-        font-size: 2rem;
-    }
-    .section-cursosComunidad-tiulo-h2 {
-        font-size: 1rem;
-    }
-}
-@media only screen and (max-width: 950px) {
-    .section-cursosComunidad-container {
-        padding: 0;
-        flex-direction: column;
-    }
-    .section-cursosComunidad-p1 {
-        width: 100%;
-    }  
-    .comunidad-img {
-        height: 350px;
-        width: 100%;
-    }
-    .sociedad-llc_container {
-        max-height: max-content;
-    }
-    .img-bitcoin {
-        display: none;
-    }
-}
-@media only screen and (max-width: 600px) {
-    .comunidad-img {
-        height: 200px;
-    }
-    .section-cursosComunidad-p1_p {
-        font-size: .7rem;
-    }
-}
-/* SECTION CURSOS GRATIS */
-.section-cursos{
-    width: 90%;
-    margin: 5rem auto;
-}
-.section-cursos-h1{
-    font-size: 2.3rem;
-    font-weight: 900;
-    letter-spacing: 5px;
-    color: var(--clr-negro);
-    text-align: center;
-    margin-bottom: 3rem;
-}
-.section-cursos-videosContainer{
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 5rem;
-    row-gap: 2rem;
-}
-.section-cursos-videos{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    flex-grow: .5;
-    margin: auto;
-    gap: 2px;
-}
-.section-cursos-video-img a{
-    width: 100%;
-}
-.section-cursos-video-img iframe{
-    width: 100%;
-    height: 320px;
-    border-radius: 10px;
-}
-.section-cursos-video-titulo{
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--clr-negro);
-}
-.section-cursos-video-titulo:hover{
-    transition: 300ms;
-    color: #787676;
-}
-.section-cursos-button-container{
-    display: flex;
-    justify-content: center;
-}
-.section-cursos-button{
-    padding: .7rem 2.5rem;
-    text-align: center;
-    background-color: #ff00d4;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 50px;
-    font-size: 1rem;
-}
-.section-cursos-button:hover{
-    transition: 300ms;
-    transform: scale(1.02);
-    background-color: #de00b9;
-}
-@media screen and (max-width:900px){
-    .section-cursos-h1{
-        font-size: 2rem;
-    }
-    .section-cursos-videosContainer{
-        gap: 1.5rem;
-    }
-    .section-cursos-video-titulo{
-        font-size: 1.1rem;
-    }
-    .section-cursos-video-img img{
-        height: 220px;
-    }
-}
-@media screen and (max-width:650px){
-    .section-cursos-videosContainer{
-        display: inline;
-    }
-    .section-cursos-videos{
-        margin-bottom: 1rem;
-    }
-}
-@media screen and (max-width:440px){
-    .section-cursos-video-img img{
-        height:190px;
-    }
-}
-@media screen and (max-width:375px){
-    .section-cursos-video-img img{
-        height:170px;
-    }
-    .section-cursos-video-img iframe {
-        height: 170px;
-    }
-}
 /* SECTION EBOOKS */
 .section-ebooks{
     width: 90%;
@@ -708,7 +430,7 @@ html{
     height: 350px;
 }
 .section-ebook-imgButon{
-    padding:2.5rem;
+    padding: 2rem;
 }
 .section-ebook-imgButon a{
     text-align: center;
@@ -724,36 +446,6 @@ html{
 .section-ebook-1 a:hover, .section-ebook-2 a:hover{
     transition: 300ms;
     background-color: #de00b9;
-}
-@media screen and (max-width:750px){
-    .section-ebook-1, .section-ebook-2{
-        width: 100%;
-    }
-    .section-ebooks-h1{
-        font-size: 2rem;
-    }
-    .section-ebook-1 h2, .section-ebook-2 h2{
-        font-size: 1rem;
-    }
-    .section-ebook-1 p, .section-ebook-2 p{
-        font-size: .8rem;
-        font-weight: 300;
-        letter-spacing: 1px;
-    }
-    .section-ebook-1 a, .section-ebook-2 a{
-        font-size: .9rem;
-    }
-    .section-ebooks-container{
-        flex-direction: column;
-    }
-    .section-ebook-1 img, .section-ebook-2 img{
-        height: 350px;
-    }
-}
-@media screen and (max-width:500px){
-    .section-ebook-imgButon{
-        padding: 0;
-    }
 }
 /* SECTION SOBRE NOSOTROS */
 .sNosotros-container{
@@ -820,32 +512,6 @@ html{
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-}
-@media screen and (max-width:900px){
-    .sNosotros h1{
-        font-size: 1.8rem;
-    }
-    .sNosotros-card-info h2{
-        font-size: 1.3rem;
-    }
-    .sNosotros-card-info p{
-        font-size: .8rem;
-    }
-}
-@media screen and (max-width:800px){
-    .sNosotros-info{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-    .sNosotros-card{
-        width: 100%;
-        min-height: max-content;
-    }
-    .sNosotros-card-info{
-        margin: 2rem;
-    }
 }
 /* FOOTER */
 .footer{
@@ -917,57 +583,6 @@ html{
     font-size: .6rem;
     letter-spacing: .5px;
     padding: 5px;
-}
-@media screen and (max-width:800px){
-    .footer-container{
-        gap: 2rem;
-    }
-    .footer-logo a img{
-        width: 70px;
-    }
-    .footer-titulos h1{
-        font-size: 1.2rem;
-    }
-    .footer-titulos p{
-        font-size: .8rem;
-    }
-    .footer-contacto h2{
-        font-size: 1.2rem;
-    }
-    .footer-iconos a{
-        font-size: .8rem;
-        width: 30px;
-        height: 30px;
-    }
-    .footer-dr{
-        font-size: .5rem;
-    }
-}
-@media screen and (max-width:600px){
-    .footer-container{
-        gap: 1rem;
-    }
-    .footer-logo a img{
-        width: 50px;
-    }
-    .footer-titulos h1{
-        font-size: .8rem;
-    }
-    .footer-titulos p{
-        font-size: .6rem;
-        font-weight: 700;
-    }
-    .footer-contacto h2{
-        font-size: .6rem;
-    }
-    .footer-iconos a{
-        font-size: .8rem;
-        width: 25px;
-        height: 25px;
-    }
-    .footer-iconos{
-        gap: 10px;
-    }
 }
 /* MODO OSCURO */
 .dark{
@@ -1057,4 +672,279 @@ body.darkReal .card-img img {
 }
 body.darkReal .card {
     box-shadow: 0 5px 20px 5px #343434;
+}
+/* RESPONSIVE */
+/* nav */
+@media screen and (max-width : 1250px){  
+    .nav-info{
+        position: absolute;
+        top: 100px;
+        right:-100%;
+        background-color: var(--clr-blanco);
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        transition: 300ms;
+    }
+    .visible{
+        right: 0;
+    }
+    .nav-bars {
+        display: block;
+        position: absolute;
+        right: 8%;
+    }
+    .fa-bars{
+        display: block;
+        font-size: 1.5rem;
+        color: var(--clr-negro);
+        cursor: pointer;
+        text-align: center;
+    }
+    .nav-btn, .nav-logo{
+        display: none;
+    }
+    .nav1-ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width:600px){
+    .nav-icons a{
+        font-size:1.2rem;
+        gap:1.5rem 
+    }
+}
+/* HERO */
+@media screen and (max-width:1000px){
+    .hero {
+        background: none;
+    }
+}
+@media screen and (max-width:900px){
+    .hero-container h1{
+        font-size: 2.5rem;
+    }
+    .hero-container h2{
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width:530px){
+    .hero-container h1{
+        font-size: 2.1rem;
+        padding: 1rem;
+    }
+    .hero-container h2{
+        font-weight: 500;
+    }
+}
+@media screen and (max-width:500px){
+    .hero-container h1 {
+        font-size: 1.7rem;
+    }
+}
+/* CARDS */
+@media screen and (max-width : 1000px){
+    .DIV-CONTAINER {
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 200px 200px;
+    }
+}
+@media screen and (max-width : 530px){
+    .DIV-CONTAINER {
+        gap: 1rem;
+    }
+}
+@media screen and (max-width : 480px){
+    .DIV-CONTAINER {
+        grid-template-columns: 140px 140px;
+        grid-template-rows: 140px 140px;
+    }
+}
+/* SOCIEDAD LLC */
+@media only screen and (max-width: 1150px) {
+    .img-bitcoin {
+        display: none;
+    }
+    .main-p {
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .sociedad-llc_container {
+        padding: 0;
+        max-height: max-content;
+        flex-direction: column;
+    }
+    .sociedad-llc_p {
+        width: 100%;
+    }
+    .sociedad-llc_img_container {
+        height: 350px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .main-titulo-h1 {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .sociedad-llc_img_container {
+        height: 200px;
+    }
+}
+/* COMUNIDAD */
+@media only screen and (max-width: 1150px) {
+    .section-cursosComunidad-p1_p {
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .section-cursosComunidad-container {
+        padding: 0;
+        flex-direction: column;
+    }
+    .section-cursosComunidad-p1 {
+        width: 100%;
+    }  
+    .comunidad-img {
+        height: 350px;
+        width: 100%;
+    }
+    .sociedad-llc_container {
+        max-height: max-content;
+    }
+    .img-bitcoin {
+        display: none;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .section-cursosComunidad-tiulo-h1 {
+        font-size: 2rem;
+    }
+    .section-cursosComunidad-tiulo-h2 {
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .comunidad-img {
+        height: 200px;
+    }
+    .section-cursosComunidad-p1_p {
+        font-size: .7rem;
+    }
+}
+/* EBOOK */
+@media screen and (max-width:750px){
+    .section-ebook-1, .section-ebook-2{
+        width: 100%;
+    }
+    .section-ebooks-h1{
+        font-size: 2rem;
+    }
+    .section-ebook-1 h2, .section-ebook-2 h2{
+        font-size: 1rem;
+    }
+    .section-ebook-1 p, .section-ebook-2 p{
+        font-size: .8rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    .section-ebook-1 a, .section-ebook-2 a{
+        font-size: .9rem;
+    }
+    .section-ebooks-container{
+        flex-direction: column;
+    }
+    .section-ebook-1 img, .section-ebook-2 img{
+        height: 350px;
+    }
+    .section-ebook-imgButon{
+        padding: 0;
+    }
+}
+/* SOBRE NOSOTROS */
+@media screen and (max-width:900px){
+    .sNosotros h1{
+        font-size: 1.8rem;
+    }
+    .sNosotros-card-info h2{
+        font-size: 1.3rem;
+    }
+    .sNosotros-card-info p{
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width:800px){
+    .sNosotros-info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .sNosotros-card{
+        width: 100%;
+        min-height: max-content;
+    }
+    .sNosotros-card-info{
+        margin: 2rem;
+    }
+}
+/* FOOTER */
+@media screen and (max-width:800px){
+    .footer-container{
+        gap: 2rem;
+    }
+    .footer-logo a img{
+        width: 70px;
+    }
+    .footer-titulos h1{
+        font-size: 1.2rem;
+    }
+    .footer-titulos p{
+        font-size: .8rem;
+    }
+    .footer-contacto h2{
+        font-size: 1.2rem;
+    }
+    .footer-iconos a{
+        font-size: .8rem;
+        width: 30px;
+        height: 30px;
+    }
+    .footer-dr{
+        font-size: .5rem;
+    }
+}
+@media screen and (max-width:600px){
+    .footer-container{
+        gap: 1rem;
+    }
+    .footer-logo a img{
+        width: 50px;
+    }
+    .footer-titulos h1{
+        font-size: .8rem;
+    }
+    .footer-titulos p{
+        font-size: .6rem;
+        font-weight: 700;
+    }
+    .footer-contacto h2{
+        font-size: .6rem;
+    }
+    .footer-iconos a{
+        font-size: .8rem;
+        width: 25px;
+        height: 25px;
+    }
+    .footer-iconos{
+        gap: 10px;
+    }
 }
